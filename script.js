@@ -51,18 +51,24 @@ let email_label_break = break_create();
 let email_input = input_create("input","type","email","id","email");
 let email_input_break = break_create();
 
+let password_label = label_create("label","for","password","Password:");
+let password_label_break = break_create();
+let password_input = input_create("input","type","password","id","password");
+let password_input_break = break_create();
+
 let submit = button_create("button","type","submit","onclick","display_input()","Submit");
 
 document.body.append(first_label,first_label_break, first_input,first_input_break,middle_label,
     middle_label_break,middle_input,middle_input_break,last_label,last_label_break,last_input,last_input_break,
-    email_label,email_label_break,email_input,email_input_break,submit);
+    email_label,email_label_break,email_input,email_input_break,password_label,password_label_break,password_input,password_input_break,submit);
 
 
-    // Print inputs in console
+ // Print inputs in console
 
 function display_input() {
     console.log(`First Name: ${document.getElementById("firstname").value}`);
     console.log(`Middle Name: ${document.getElementById("middlename").value}`);
     console.log(`Last Name: ${document.getElementById("lastname").value}`);
     console.log(`Email: ${document.getElementById("email").value}`);
+    console.log(`Password: ${document.getElementById("password").value}`);
 }
